@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, ubuntu-24.04]
 
     steps:
       - name: 소스코드 가져오기
