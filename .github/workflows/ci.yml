@@ -1,10 +1,20 @@
 name: CI
-on: [push]
+on:
+  push:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - run: echo "Hello, DevOps!"
+      - name: 소스코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: 현재 디렉터리 확인
+        run: pwd
+
+      - name: 파일 목록 확인
+        run: ls -al
+
+      - name: 메시지 출력
+        run: echo "Hello, DevOps!"
